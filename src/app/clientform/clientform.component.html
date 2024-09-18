@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registration or Sign Up form in HTML CSS | CodingLab </title>
+
+</head>
+<body>
+<div class="wrapper">
+  <h2>Add New Client</h2>
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <!-- Client Name -->
+    <div class="input-box">
+      <input type="text" [(ngModel)]="client.customerName" name="customerName" id="name" class="form-control" placeholder="Entrez le nom du client" required>
+    </div>
+
+    <!-- Client Email -->
+    <div class="input-box">
+      <input type="email" [(ngModel)]="client.email" name="email" id="email" class="form-control" placeholder="Entrez l'email du Client" required>
+    </div>
+
+    <!-- Client Phone Number -->
+    <div class="input-box">
+      <input type="tel" [(ngModel)]="client.tel" name="Tel" id="phone" class="form-control" placeholder="Entrez le numero du tel du Client" required>
+    </div>
+
+    <!-- Client Address -->
+    <div class="input-box">
+      <input type="text" [(ngModel)]="client.customerAddress" name="customerAddress" id="address" class="form-control" placeholder="Entrez l'Adresse du Client" required>
+    </div>
+
+    <div class="input-box button">
+      <input type="submit" value="Add New Client" class="btn btn-primary w-100">
+    </div>
+  </form>
+
+</div>
+</body>
+</html>

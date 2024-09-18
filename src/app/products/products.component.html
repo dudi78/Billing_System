@@ -1,0 +1,86 @@
+
+<head>
+  <title>Google Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<br><br><br><br>
+<div class="combo-container">
+  <label class="custom-select" for="styledSelect1">
+    <select id="styledSelect1" name="options" [(ngModel)]="selectedCategory">
+      <option value="">Select Category</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </label>
+
+  <a (click)="openPopup()"><i class="fa fa-dropbox" style="font-size:36px ;color: #428042"></i></a>
+</div>
+<table class="container">
+  <thead>
+  <tr>
+    <th><h1>Category</h1></th>
+    <th><h1>Product Name</h1></th>
+    <th><h1>Description</h1></th>
+    <th><h1>Length</h1></th>
+    <th><h1>Width</h1></th>
+    <th><h1>Height</h1></th>
+    <th><h1>Thickness</h1></th>
+    <th><h1>Wood Type</h1></th>
+    <th><h1>Price</h1></th>
+    <th><h1>Unit</h1></th>
+    <th><h1>Stock Quantity</h1></th>
+    <th><h1>Weight</h1></th>
+    <th><h1>Actions </h1></th>
+
+
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let produit of products">
+    <td>{{ produit.category }}</td>
+    <td>{{ produit.productName }}</td>
+    <td>{{ produit.description }}</td>
+    <td>{{ produit.length }}</td>
+    <td>{{ produit.width }}</td>
+    <td>{{ produit.height }}</td>
+    <td>{{ produit.thickness }}</td>
+    <td>{{ produit.woodType }}</td>
+    <td>{{ produit.price }}</td>
+    <td>{{ produit.unit }}</td>
+    <td>{{ produit.stockQuantity }}</td>
+    <td>{{ produit.weight }}</td>
+
+    <td> <button class="btn btn-edit" (click)="edit(produit)"><i style="font-size:24px" class="fa">&#xf044;</i></button>
+       <button class="btn btn-delete" (click)="deleteProduct(produit)"><i style="font-size:24px" class="fa">&#xf014;</i></button>
+    </td>
+
+
+
+
+  </tr>
+  </tbody>
+</table>
+
+<app-product-form
+  *ngIf="isPopupVisible"
+  (close)="closeModal()"
+  [ProductToUpdate]="theproduct"
+  [addp]="add"
+  (update)="refreshlist()"
+  (load)="ngOnInit()"
+
+></app-product-form>
+
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 Billing System. All rights reserved.</p>
+    <ul>
+      <li><a href="/privacy-policy">Privacy Policy</a></li>
+      <li><a href="/terms-of-service">Terms of Service</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>

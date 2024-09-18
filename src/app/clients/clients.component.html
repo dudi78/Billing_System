@@ -1,0 +1,59 @@
+<head>
+  <title>Google Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<br><br><br> <br><br>
+<div class="search-container">
+  <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="searchTerm" (input)="filterClients()">
+  <button class="btn btn-success" (click)="filterClients()">Search</button>
+
+  <a routerLink="/add-client">
+    <i class="material-icons" style="font-size:36px;color: #428042 ; margin-left: 777%">group_add</i>
+  </a>
+</div>
+
+<div class="container">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Client Id</div>
+      <div class="col col-2">Customer Name</div>
+      <div class="col col-3">Address</div>
+      <div class="col col-4">Email</div>
+      <div class="col col-5">Tel</div>
+      <div class="col col-6">Actions</div>
+    </li>
+    <li class="table-row" *ngFor="let client of  filteredClients">
+      <div class="col col-1">{{ client.customerId }}</div>
+      <div class="col col-2">{{ client.customerName }}</div>
+      <div class="col col-3">{{ client.customerAddress }}</div>
+      <div class="col col-4">{{ client.email }}</div>
+      <div class="col col-5">{{ client.tel }}</div>
+      <div class="col col-6">
+        <button class="btn btn-edit" (click)="edit(client)">Edit</button>
+        <button class="btn btn-delete" (click)="deleteClient(client)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<app-client-edit-dialog
+  *ngIf="showModal"
+  [clientToUpdate]="theclient"
+  (update)="refreshClients()"
+  (close)="closeModal()"
+>
+</app-client-edit-dialog>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 Billing System. All rights reserved.</p>
+    <ul>
+      <li><a href="/privacy-policy">Privacy Policy</a></li>
+      <li><a href="/terms-of-service">Terms of Service</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+</body>

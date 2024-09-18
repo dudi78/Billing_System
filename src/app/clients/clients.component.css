@@ -1,0 +1,178 @@
+
+.search-input {
+  padding: 10px 20px;
+  width: 300px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: #66afe9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  margin: 20px 0;          /* Add some spacing around */
+}
+
+.search-container input {
+  margin-right: 10px; /* Space between input and button */
+}
+
+.search-container .btn {
+  /* Additional button styles if needed */
+}
+
+
+
+body {
+
+  font-family: 'lato', sans-serif;
+}
+.col-5 {
+  flex-basis: 20%; /* Adjust as needed, ensure this fits within the table width */
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Style for buttons */
+.btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px; /* Space between buttons */
+}
+
+.btn-edit {
+  background-color: #ffffff; /* Edit button color */
+  color: black;
+  border: 2px solid rgba(0, 0, 0, 0.71);
+}
+
+.btn-delete {
+  background-color: #ffffff; /* Delete button color */
+  color: black;
+  border: 2px solid rgba(0, 0, 0, 0.71);
+}
+
+.btn:hover {
+  opacity: 0.8; /* Slightly fade buttons on hover */
+}
+
+/* Responsive adjustments for table */
+.responsive-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 18px 140px; /* Adjust padding to fit buttons better */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Adjust margin for spacing */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.table-header {
+  background-color: #95A5A6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.table-row {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 9px 0px rgb(30, 27, 27);
+}
+
+.col-1 {
+  flex-basis: 10%;
+}
+
+.col-2 {
+  flex-basis: 30%;
+}
+
+.col-3 {
+  flex-basis: 30%;
+}
+
+.col-4 {
+  flex-basis: 20%;
+}
+
+.col-5 {
+  flex-basis: 10%;
+}
+
+@media all and (max-width: 767px) {
+  .table-header {
+    display: none;
+  }
+  .table-row {
+    display: block;
+  }
+  .col {
+    flex-basis: 100%;
+    display: block;
+    padding: 10px 0;
+  }
+  .col:before {
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+
+
+}
+
+.footer-content {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+  text-decoration: underline;
+}

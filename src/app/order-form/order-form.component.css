@@ -1,0 +1,108 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between the form and the list */
+}
+
+.order-form {
+  margin-top: 6%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 50%; /* Adjust width as needed */
+}
+
+.order-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.order-form input, .order-form select, .order-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+.order-list {
+  margin-top: 6%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 50%; /* Adjust width as needed */
+}
+
+.order-list h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2em;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-list th, .order-list td {
+  padding: 12px;
+  text-align: left;
+}
+
+.order-list th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.order-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-list tr:hover {
+  background-color: #ddd;
+}
+
+.order-list button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-list button:hover {
+  background-color: #c62828;
+}

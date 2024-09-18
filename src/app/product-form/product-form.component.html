@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="popup-overlay">
+  <div class="popup-wrapper">
+    <span class="close-btn" (click)="closeModal()">×</span>
+    <h2>{{ addp ? ' Ajoutez Un Nouveau Produit' : 'Modifier le Produit' }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-grid">
+        <div class="input-box">
+          <label for="category">Categorie du produit:</label>
+          <input type="text" id="category" placeholder="Entrez la categorie du produit" [(ngModel)]="ProductToUpdate.category" name="category" required>
+        </div>
+        <div class="input-box">
+          <label for="productName">Nom du Produit:</label>
+          <input type="text" id="productName" placeholder="Entrez le nom du Produit" [(ngModel)]="ProductToUpdate.productName" name="productName" required>
+        </div>
+        <div class="input-box">
+          <label for="description">Description du produit:</label>
+          <input type="text" id="description" placeholder="Entrez la Description du produit" [(ngModel)]="ProductToUpdate.description" name="description" required>
+        </div>
+        <div class="input-box">
+          <label for="length">Longueur (cm):</label>
+          <input type="number" id="length" placeholder="Entrez Longueur (cm)" [(ngModel)]="ProductToUpdate.length" name="length">
+        </div>
+        <div class="input-box">
+          <label for="width">Largeur (cm):</label>
+          <input type="number" id="width" placeholder="Entrez largeur (cm)" [(ngModel)]="ProductToUpdate.width" name="width">
+        </div>
+        <div class="input-box">
+          <label for="height">Hauteur (cm):</label>
+          <input type="number" id="height" placeholder="Entrez Hauteur (cm)" [(ngModel)]="ProductToUpdate.height" name="height">
+        </div>
+        <div class="input-box">
+          <label for="thickness">Thickness (cm):</label>
+          <input type="number" id="thickness" placeholder="Entrez Thickness (cm)" [(ngModel)]="ProductToUpdate.thickness" name="thickness">
+        </div>
+        <div class="input-box">
+          <label for="woodType">Type de bois:</label>
+          <input type="text" id="woodType" placeholder="Entrez le type de bois" [(ngModel)]="ProductToUpdate.woodType" name="woodType">
+        </div>
+        <div class="input-box">
+          <label for="price">Prix:</label>
+          <input type="number" id="price" placeholder="Entrez Prix" [(ngModel)]="ProductToUpdate.price" name="price" required>
+        </div>
+        <div class="input-box">
+          <label for="unit">Unit:</label>
+          <input type="text" id="unit" placeholder="Entrez Unit" [(ngModel)]="ProductToUpdate.unit" name="unit" required>
+        </div>
+        <div class="input-box">
+          <label for="stockQuantity">Stock Quantity:</label>
+          <input type="number" id="stockQuantity" placeholder="Entrez Stock Quantity" [(ngModel)]="ProductToUpdate.stockQuantity" name="stockQuantity" required>
+        </div>
+        <div class="input-box">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="Entrez Weight (kg)" [(ngModel)]="ProductToUpdate.weight" name="weight">
+        </div>
+      </div>
+      <br>
+      <div class="input-box button">
+        <input type="submit" [value]="addp ? ' Ajouter le produit' : 'Mettre à jour le produit '">
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

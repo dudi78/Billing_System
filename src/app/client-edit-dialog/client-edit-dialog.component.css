@@ -1,0 +1,142 @@
+/* Modal Background */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Slight blur for the background */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #f7f7f7; /* Light grey background */
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 60%; /* Adjust width as needed */
+  max-width: 800px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close {
+  color: #666;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Slightly darker background for contrast */
+  color: #333;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects for Customer Name and Address */
+form input#customerName,
+form input#customerAddress {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Slightly darker background for contrast */
+  color: #333;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus {
+  border-color: #428042; /* Green border on focus */
+  background-color: #e8f5e9; /* Light green background on focus */
+  box-shadow: 0 0 8px rgba(66, 128, 66, 0.3); /* Green glow */
+}
+
+/* Placeholder Styling */
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="tel"]::placeholder {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+form button[type="submit"],
+form button[type="button"] {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button[type="submit"] {
+  background-color: #428042; /* Green background */
+  color: #fff;
+}
+
+form button[type="submit"]:hover {
+  background-color: #357a3d; /* Darker green on hover */
+  box-shadow: 0 4px 12px rgba(66, 128, 66, 0.4); /* Add shadow on hover */
+}
+
+form button[type="button"] {
+  background-color: #666; /* Grey background */
+  color: #fff;
+  margin-left: 10px;
+}
+
+form button[type="button"]:hover {
+  background-color: #555; /* Darker grey on hover */
+  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4); /* Add shadow on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
